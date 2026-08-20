@@ -5,6 +5,7 @@ import {
   Text,
   TextInput,
   View,
+  Pressable,
 } from 'react-native';
 
 import { vocabulary } from '@/data/words';
@@ -61,6 +62,15 @@ export default function HomeScreen() {
             }
           }}
         />
+
+        <Pressable
+          style={styles.skipButton}
+          onPress={() => {
+            setPrompt(getRandomPrompt(prompt.group));
+            setAnswer('');
+          }}>
+          <Text style={styles.skipButtonText}>Skip</Text>
+        </Pressable>
       </View>
     </SafeAreaView>
   );
@@ -106,5 +116,16 @@ const styles = StyleSheet.create({
     padding: 14,
     fontSize: 18,
     marginBottom: 16,
+  },
+
+  skipButton: {
+    marginTop: 16,
+    padding: 12,
+    alignItems: 'center',
+  },
+
+  skipButtonText: {
+    fontSize: 16,
+    fontWeight: '600',
   },
 });

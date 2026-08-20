@@ -1,4 +1,11 @@
-# Rough ideas
+# Synonyms Game
 
-Compute set of all english words, membership check upon keystroke
-Also have a submit button that goes up to 2 autocorrected characters
+A React Native vocabulary game built with Expo.
+
+Given a word, come up with another word with a similar meaning.
+
+## Todo / ideas
+
+Explore an API to fetch a word and check if synonym
+
+Submit button autocorrect up to 2 characters from valid word
